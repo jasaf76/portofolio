@@ -1,0 +1,180 @@
+.app__footer {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.app__footer-cards {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4em 2rem 2rem;
+
+  .app__footer-card {
+    min-width: 290px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fef4f5;
+
+    transition: all 0.3s ease-in-out;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin: 0 0.7rem;
+    }
+
+    p {
+      font-weight: 500;
+    }
+    a {
+      text-decoration: none;
+      font-weight: 500;
+    }
+    &:hover {
+      box-shadow: 0 0 25px #fef4f5;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.app__footer-cards .app__footer-card:last-child {
+  background-color: #f2f7fb;
+}
+
+.app__footer-cards .app__footer-card:last-child:hover {
+  box-shadow: 0 0 25px #f2f7fb;
+}
+
+.app__footer-form {
+  width: 60%;
+  flex-direction: column;
+  margin: 1rem 2rem;
+
+  div {
+    width: 100%;
+
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+
+    transition: all 0.3s ease-in-out;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.95rem;
+      border: none;
+      border-radius: 7px;
+      background-color: var(--primary-color);
+
+      font-family: var(--font-base);
+      color: var(--secondary-color);
+      outline: none;
+    }
+
+    textarea {
+      height: 170px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 25px var(--primary-color);
+    }
+  }
+
+  .btn-neon {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    background: #125fed;
+    border-radius: 9px;
+    border: 3px solid #e9f383;
+  }
+  .btn-neon:hover{
+    background: #34f715;
+    box-shadow: 0 0 10px #f503f1, 0 0 40px #f503c5, 0 0 80px #f205db;
+    transition-delay: 1s;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#f307d7);
+ }
+ .btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#f20910);
+}
+ .btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#a945c7);
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#f21703);
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
